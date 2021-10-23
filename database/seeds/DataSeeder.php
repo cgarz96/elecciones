@@ -16,7 +16,7 @@ class DataSeeder extends Seeder
 		DB::table('users')->insert([
 		           	['name' => 'admin',
 		           	'email' => 'admintest@gmail.com',
-		            'password' => Hash::make('1234')
+		            'password' => Hash::make('12345678')
 		            ]
 		]);
 
@@ -121,6 +121,22 @@ class DataSeeder extends Seeder
 		           	[
 		           	'sede' => 'CATUNA'
 		            ]
+		]);
+
+		DB::table('elecciones')->insert([
+		           	['estamento_id' => 1,
+		           	'mesa' => 233,
+		           	'categoria_electoral_id'=>4,
+		           	'departamento_id'=3,
+		           	'cantidad':12
+		            ],
+		           	['estamento_id' => 3,
+		           	'mesa' => 232,
+		           	'categoria_electoral_id'=>4,
+		           	'departamento_id'=3,
+		           	'cantidad':34
+		            ],
+	           		
 		]);
     }
 }
